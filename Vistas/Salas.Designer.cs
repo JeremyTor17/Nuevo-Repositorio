@@ -1,6 +1,6 @@
 ﻿namespace Vistas
 {
-    partial class Form1
+    partial class Salas
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -39,12 +39,14 @@
             this.TxtCap = new System.Windows.Forms.Label();
             this.Descripcion = new System.Windows.Forms.TextBox();
             this.TxtDes = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.BdD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // AgSal
             // 
-            this.AgSal.Location = new System.Drawing.Point(59, 519);
+            this.AgSal.Location = new System.Drawing.Point(37, 519);
             this.AgSal.Name = "AgSal";
             this.AgSal.Size = new System.Drawing.Size(106, 23);
             this.AgSal.TabIndex = 2;
@@ -75,15 +77,16 @@
             this.BdD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.BdD.Location = new System.Drawing.Point(12, 229);
             this.BdD.Name = "BdD";
-            this.BdD.Size = new System.Drawing.Size(476, 273);
+            this.BdD.Size = new System.Drawing.Size(440, 273);
             this.BdD.TabIndex = 5;
+            this.BdD.SelectionChanged += new System.EventHandler(this.BdD_SelectionChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Silver;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(91, 26);
+            this.label2.Location = new System.Drawing.Point(76, 26);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(300, 31);
             this.label2.TabIndex = 6;
@@ -91,7 +94,7 @@
             // 
             // BoSal
             // 
-            this.BoSal.Location = new System.Drawing.Point(189, 519);
+            this.BoSal.Location = new System.Drawing.Point(167, 519);
             this.BoSal.Name = "BoSal";
             this.BoSal.Size = new System.Drawing.Size(106, 23);
             this.BoSal.TabIndex = 7;
@@ -101,7 +104,7 @@
             // 
             // MoSal
             // 
-            this.MoSal.Location = new System.Drawing.Point(318, 519);
+            this.MoSal.Location = new System.Drawing.Point(296, 519);
             this.MoSal.Name = "MoSal";
             this.MoSal.Size = new System.Drawing.Size(106, 23);
             this.MoSal.TabIndex = 8;
@@ -145,13 +148,27 @@
             this.TxtDes.TabIndex = 11;
             this.TxtDes.Text = "Descripcion";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pictureBox1.BackgroundImage = global::Vistas.Properties.Resources.Yes;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Location = new System.Drawing.Point(402, 15);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(50, 42);
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::Vistas.Properties.Resources.depositphotos_353360974_stock_photo_abstract_background_blue_gradient_white;
-            this.ClientSize = new System.Drawing.Size(505, 554);
+            this.ClientSize = new System.Drawing.Size(463, 554);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Descripcion);
             this.Controls.Add(this.TxtDes);
             this.Controls.Add(this.Capacidad);
@@ -167,6 +184,7 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.BdD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -184,6 +202,7 @@
         private System.Windows.Forms.Label TxtCap;
         private System.Windows.Forms.TextBox Descripcion;
         private System.Windows.Forms.Label TxtDes;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

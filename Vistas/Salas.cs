@@ -11,14 +11,14 @@ using System.Data.SqlClient;
 
 namespace Vistas
 {
-    public partial class Form1 : Form
+    public partial class Salas : Form
     {
         
         static string consql = "server= localhost ; database= proyectofinal ; integrated security= true";
 
         SqlConnection conexion = new SqlConnection(consql);
 
-        public Form1()
+        public Salas()
         {
             InitializeComponent();
         }
@@ -77,6 +77,18 @@ namespace Vistas
             Descripcion.Text = "";
 
             this.Mostrar();
+        }
+
+        private void BdD_SelectionChanged(object sender, EventArgs e)
+        {
+            Nombre.Text = Convert.ToString(BdD.CurrentRow.Cells["nombre"].Value);
+            Capacidad.Text = Convert.ToString(BdD.CurrentRow.Cells["capacidad"].Value); ;
+            Descripcion.Text = Convert.ToString(BdD.CurrentRow.Cells["descripción"].Value); ;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
